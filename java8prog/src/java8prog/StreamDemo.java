@@ -1,6 +1,7 @@
 package java8prog;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class StreamDemo {
 
@@ -15,7 +16,9 @@ public class StreamDemo {
 	}
 
 	private static void arrangeOrder(Map<String, Integer> map) {
-		// TODO Auto-generated method stub
+
 		
+		List<Map.Entry<String, Integer>> list = map.entrySet().stream().sorted((i1,i2)->-i1.getValue().compareTo(i2.getValue())).collect(Collectors.toList());
+		list.forEach(i->System.out.println(i.getKey()+":"+i.getValue()));
 	}
 }
