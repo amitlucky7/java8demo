@@ -13,7 +13,7 @@ public class StreamDemo {
 		map.put("rahul", 2);
 		
 		arrangeOrder(map);
-		//calling one more method below
+
 	}
 
 	private static void arrangeOrder(Map<String, Integer> map) {
