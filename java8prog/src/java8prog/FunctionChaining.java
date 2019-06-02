@@ -9,6 +9,7 @@ public class FunctionChaining {
 		Function<Integer, Integer> f2 = i->i*i*i;
 		
 		System.out.println(f1.compose(f2).apply(2));
+		System.out.println(f2.compose(f1).apply(5));
 		
 	}
 }
